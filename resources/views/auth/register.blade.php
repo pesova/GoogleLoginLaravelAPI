@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layout.app')
+=======
+@extends('layouts.app')
+>>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
 
 @section('content')
 <div class="container">
@@ -10,7 +14,10 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+<<<<<<< HEAD
 
+=======
+>>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -67,7 +74,6 @@
                                     {{ __('Register') }}
                                 </button>
 
-                                <a href="{{ url('/redirect') }}" class="btn btn-primary">Register With Google</a>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                             </div>
                         </div>

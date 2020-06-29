@@ -50,7 +50,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+<<<<<<< HEAD
             'name' => ['required', 'string', 'max:255'],
+=======
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'phone_number' => ['required', 'digits:11'],
+>>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -65,9 +71,24 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+<<<<<<< HEAD
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }
+=======
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'phone_number' => $data['phone_number'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'user_ref_id' => uniqid(),
+        ]);
+    }
+
+    public function storeOwnerRegister(){
+        return view('auth.store.signup');
+    }
+>>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
 }
