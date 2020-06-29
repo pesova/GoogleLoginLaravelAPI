@@ -92,7 +92,7 @@
                                                 class="font-size-16 font-weight-bold">Or</span></div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <a href="#" class="btn btn-white"><i
+                                                <a href="{{ url('/redirect') }}" class="btn btn-white"><i
                                                         class='uil uil-google icon-google mr-2'></i>With Google</a>
                                             </div>
                                             <div class="col-6 text-right">

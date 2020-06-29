@@ -33,6 +33,6 @@ return [
     'google' => [
         'client_id' => '504451163170-5um5l59ha2tug6ratq2pkr2ue8u9tleb.apps.googleusercontent.com',
         'client_secret' => 'zsPykJzGhHC2NqWREB63F7jB',
-        'redirect' => 'http://localhost:8000/auth/google/callback'],
+        'redirect' => 'http://localhost:8000'],
 
 ];

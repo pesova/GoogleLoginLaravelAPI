@@ -13,27 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-
-Route::get('/redirect', 'SocialAuthGoogleController@redirect');
-Route::get('/callback', 'SocialAuthGoogleController@callback');
-
-
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-=======
 // Auth::routes();
 
 /**
  * Authentication Routes
  */
+//google API routes
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/callback', 'SocialAuthGoogleController@callback');
+
+
 Route::get('/login', 'Auth\LoginController@storeOwnerLogin')->name('login');
 Route::get('/register', 'Auth\RegisterController@storeOwnerRegister')->name('register');
 Route::post('/login', 'Auth\LoginController@login'); //this will be changed in future to => store/login, user/login
@@ -59,4 +48,3 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     Route::get('/complaint/new', 'ComplaintsController@index')->name('complaint.form');
     Route::get('/complaint', 'ComplaintsController@index')->name('complaint.log');
 });
->>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c

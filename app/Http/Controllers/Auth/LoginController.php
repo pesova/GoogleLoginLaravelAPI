@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-<<<<<<< HEAD
 use Socialite;
-=======
->>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -41,8 +38,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-<<<<<<< HEAD
-=======
 
     public function storeOwnerLogin(){
         return view('auth.store.login');
@@ -54,5 +49,4 @@ class LoginController extends Controller
     public function username(){
         return 'phone_number';
     }
->>>>>>> 27ed514c4ce3a61d793f59989dcf3cb35870e54c
 }
